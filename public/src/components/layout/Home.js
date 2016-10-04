@@ -1,34 +1,62 @@
 import React, { Component } from 'react'
 import Footer from '../view/Footer'
+import Nav from '../container/Nav'
+import superagent from 'superagent'
+import APIClient from '../../utils/APIClient'
 
 class Home extends Component {
+
+  constructor(){
+    super()
+    this.state = {
+      zipCode: ''
+    }
+  }
+
+  zipCodeUpdated(event){
+    console.log("it works: " + event.target.value)
+    this.setState({
+      zipCode: event.target.value
+    })
+  }
+
+  searchService(event){
+    event.preventDefault()
+    console.log("search services :" + this.state.zipCode)
+
+    APIClient.get('/api/service', null, (err, json) => {
+      if(err){
+        alert(err.message)
+        return
+      }
+      console.log(JSON.stringify(json))
+    })
+
+
+    // superagent
+    // .get('api/service')
+    // .query({price: 22222})
+    // .set('Accept', 'text/json')
+    // .end((err, response) => {
+    //   if (err) {
+    //     alert("error:" + err)
+    //     return
+    //   }
+    //
+    //   const json = response.body
+    //   if (json.confirmation != 'success'){
+    //     alert('Eroor: ' + json.message )
+    //     return
+    //   }
+    //
+    //   console.log(JSON.stringify(response.body))
+    // })
+  }
+
   render() {
     return (
       <div>
-        <header id="header" className="transparent-header page-section dark">
-
-          <div id="header-wrap">
-
-            <div className="container clearfix">
-
-              <div id="primary-menu-trigger"><i className="icon-reorder"></i></div>
-
-
-              <div id="logo">
-                <a href="index.html" className="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo" /></a>
-                <a href="index.html" className="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo" /></a>
-              </div>
-              <nav id="primary-menu">
-
-                <ul className="one-page-menu">
-                  <li className="current"><a href="#" data-href="#header"><div>Home</div></a></li>
-                  <li><a href="#" data-href="#section-features"><div>About</div></a></li>
-                  <li><a href="#" data-href="#section-pricing"><div>Join</div></a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </header>
+        <Nav  showSearch={false}/>
 
         <section id="slider" className="dark full-screen" style={{background: "url(images/landing/landing1.jpg) center", minHeight: 450}}>
 
@@ -45,10 +73,10 @@ class Home extends Component {
 
     						<form action="#" method="post" role="form" className="landing-wide-form clearfix">
     							<div className="col_two_third nobottommargin">
-    									<input type="email" className="form-control input-lg not-dark" value="" placeholder="zip code" />
+    									<input onChange={this.zipCodeUpdated.bind(this)} type="email" className="form-control input-lg not-dark"  placeholder="zip code" />
     							</div>
     							<div className="col_one_third col_last nobottommargin">
-    								<button className="btn btn-lg btn-danger btn-block nomargin" value="submit" type="submit">Search</button>
+    								<button onClick={this.searchService.bind(this)} className="btn btn-lg btn-danger btn-block nomargin" value="submit" type="submit">Search</button>
     							</div>
     						</form>
 
