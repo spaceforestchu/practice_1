@@ -21556,7 +21556,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { id: 'wrapper', classNameName: 'clearfix' },
+	        null,
 	        _react2.default.createElement(
 	          'header',
 	          { id: 'header', className: 'transparent-header page-section dark' },
@@ -21631,6 +21631,70 @@
 	                    )
 	                  )
 	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { id: 'slider', className: 'slider-parallax dark full-screen', style: { background: "url(images/landing/landing1.jpg) center" } },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'slider-parallax-inner' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'container clearfix' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'vertical-middle' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'heading-block center nobottomborder' },
+	                  _react2.default.createElement(
+	                    'h1',
+	                    { 'data-animate': 'fadeInUp' },
+	                    'It\'s your time to ',
+	                    _react2.default.createElement(
+	                      'strong',
+	                      null,
+	                      'create'
+	                    ),
+	                    ' Landing Pages for ',
+	                    _react2.default.createElement(
+	                      'strong',
+	                      null,
+	                      'FREE'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'span',
+	                    { 'data-animate': 'fadeInUp', 'data-delay': '300' },
+	                    'Building a Landing Page was never so Easy & Interactive.'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'form',
+	                  { action: '#', method: 'post', role: 'form', className: 'landing-wide-form clearfix' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col_two_third nobottommargin' },
+	                    _react2.default.createElement('input', { type: 'email', className: 'form-control input-lg not-dark', value: '', placeholder: 'zip code' })
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col_one_third col_last nobottommargin' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'btn btn-lg btn-danger btn-block nomargin', value: 'submit', type: 'submit' },
+	                      'Search'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'a',
+	                { href: '#', 'data-scrollto': '#section-features', className: 'one-page-arrow' },
+	                _react2.default.createElement('i', { className: 'icon-angle-down infinite animated fadeInDown' })
 	              )
 	            )
 	          )

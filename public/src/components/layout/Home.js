@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 class Home extends Component {
   render() {
     return (
-      <div id="wrapper" classNameName="clearfix">
+      <div>
         <header id="header" className="transparent-header page-section dark">
 
           <div id="header-wrap">
@@ -29,6 +29,38 @@ class Home extends Component {
             </div>
           </div>
         </header>
+
+        <section id="slider" className="slider-parallax dark full-screen" style={{background: "url(images/landing/landing1.jpg) center"}}>
+
+    			<div className="slider-parallax-inner">
+
+    				<div className="container clearfix">
+
+    					<div className="vertical-middle">
+
+    						<div className="heading-block center nobottomborder">
+    							<h1 data-animate="fadeInUp">It's your time to <strong>create</strong> Landing Pages for <strong>FREE</strong></h1>
+    							<span data-animate="fadeInUp" data-delay="300">Building a Landing Page was never so Easy &amp; Interactive.</span>
+    						</div>
+
+    						<form action="#" method="post" role="form" className="landing-wide-form clearfix">
+    							<div className="col_two_third nobottommargin">
+    									<input type="email" className="form-control input-lg not-dark" value="" placeholder="zip code" />
+    							</div>
+    							<div className="col_one_third col_last nobottommargin">
+    								<button className="btn btn-lg btn-danger btn-block nomargin" value="submit" type="submit">Search</button>
+    							</div>
+    						</form>
+
+    					</div>
+
+    					<a href="#" data-scrollto="#section-features" className="one-page-arrow"><i className="icon-angle-down infinite animated fadeInDown"></i></a>
+
+    				</div>
+
+    			</div>
+
+    		</section>
       </div>
     )
   }
