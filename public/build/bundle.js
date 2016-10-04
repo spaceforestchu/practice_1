@@ -56,6 +56,10 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
+	var _Main = __webpack_require__(172);
+	
+	var _Main2 = _interopRequireDefault(_Main);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -79,7 +83,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'Entry Point !'
+	        _react2.default.createElement(_Main2.default, null)
 	      );
 	    }
 	  }]);
@@ -21455,6 +21459,190 @@
 	
 	module.exports = ReactDOMNullInputValuePropHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Home = __webpack_require__(173);
+	
+	var _Home2 = _interopRequireDefault(_Home);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Main = function (_Component) {
+	  _inherits(Main, _Component);
+	
+	  function Main() {
+	    _classCallCheck(this, Main);
+	
+	    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+	  }
+	
+	  _createClass(Main, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'This is the Main Component',
+	        _react2.default.createElement(_Home2.default, null)
+	      );
+	    }
+	  }]);
+	
+	  return Main;
+	}(_react.Component);
+	
+	exports.default = Main;
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(34);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Home = function (_Component) {
+	  _inherits(Home, _Component);
+	
+	  function Home() {
+	    _classCallCheck(this, Home);
+	
+	    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+	  }
+	
+	  _createClass(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'wrapper', classNameName: 'clearfix' },
+	        _react2.default.createElement(
+	          'header',
+	          { id: 'header', className: 'transparent-header page-section dark' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'header-wrap' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'container clearfix' },
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'primary-menu-trigger' },
+	                _react2.default.createElement('i', { className: 'icon-reorder' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'logo' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'index.html', className: 'standard-logo', 'data-dark-logo': 'images/logo-dark.png' },
+	                  _react2.default.createElement('img', { src: 'images/logo.png', alt: 'Canvas Logo' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'index.html', className: 'retina-logo', 'data-dark-logo': 'images/logo-dark@2x.png' },
+	                  _react2.default.createElement('img', { src: 'images/logo@2x.png', alt: 'Canvas Logo' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'nav',
+	                { id: 'primary-menu' },
+	                _react2.default.createElement(
+	                  'ul',
+	                  { className: 'one-page-menu' },
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'current' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#', 'data-href': '#header' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        'Home'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#', 'data-href': '#section-features' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        'About'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#', 'data-href': '#section-pricing' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        null,
+	                        'Join'
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Home;
+	}(_react.Component);
+	
+	exports.default = Home;
 
 /***/ }
 /******/ ]);
