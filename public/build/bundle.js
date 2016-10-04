@@ -21503,7 +21503,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'This is the Main Component',
 	        _react2.default.createElement(_Home2.default, null)
 	      );
 	    }
@@ -21530,9 +21529,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(34);
+	var _Footer = __webpack_require__(174);
 	
-	var _reactDom2 = _interopRequireDefault(_reactDom);
+	var _Footer2 = _interopRequireDefault(_Footer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21637,7 +21636,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'section',
-	          { id: 'slider', className: 'slider-parallax dark full-screen', style: { background: "url(images/landing/landing1.jpg) center" } },
+	          { id: 'slider', className: 'dark full-screen', style: { background: "url(images/landing/landing1.jpg) center", minHeight: 450 } },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'slider-parallax-inner' },
@@ -21698,7 +21697,279 @@
 	              )
 	            )
 	          )
-	        )
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { id: 'content' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'content-wrap' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'container clearfix' },
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'section-features', className: 'heading-block title-center page-section' },
+	                _react2.default.createElement(
+	                  'h2',
+	                  null,
+	                  'Features Overview'
+	                ),
+	                _react2.default.createElement(
+	                  'span',
+	                  null,
+	                  'Some of the Features that are gonna blow your mind off'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/responsive.png', alt: 'Responsive Layout' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Responsive Layout'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '200' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/retina.png', alt: 'Retina Graphics' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Retina Graphics'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Looks beautiful & ultra-sharp on Retina Screen Displays. Retina Icons, Fonts & all others graphics are optimized.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third col_last' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '400' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/performance.png', alt: 'Powerful Performance' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Powerful Performance'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'clear' }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '600' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/flag.png', alt: 'Responsive Layout' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Endless Possibilities'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'You have complete easy control on each & every element that provides endless customization possibilities.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '800' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/tick.png', alt: 'Retina Graphics' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Light & Dark Scheme'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Change your Website\'s Primary Scheme instantly by simply adding the dark class to the body.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third col_last' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '1000' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/tools.png', alt: 'Powerful Performance' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Customizable Fonts'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Use any Font you like from Google Web Fonts, Typekit or other Web Fonts. They will blend in perfectly.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'clear' }),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { clasNames: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '1200' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/map.png', alt: 'Responsive Layout' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Responsive Layout'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '1400' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/seo.png', alt: 'Retina Graphics' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Retina Graphics'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Looks beautiful & ultra-sharp on Retina Screen Displays. Retina Icons, Fonts & all others graphics are optimized.'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col_one_third col_last' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'feature-box fbox-plain' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'fbox-icon', 'data-animate': 'bounceIn', 'data-delay': '1600' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: '#' },
+	                      _react2.default.createElement('img', { src: 'images/icons/features/support.png', alt: 'Powerful Performance' })
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Powerful Performance'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.'
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
@@ -21707,6 +21978,163 @@
 	}(_react.Component);
 	
 	exports.default = Home;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Footer = function (_Component) {
+	  _inherits(Footer, _Component);
+	
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+	
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+	
+	  _createClass(Footer, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "footer",
+	          { id: "footer", className: "dark" },
+	          _react2.default.createElement("div", { className: "container" }),
+	          _react2.default.createElement(
+	            "div",
+	            { id: "copyrights" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "container clearfix" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "col_half" },
+	                "Copyrights \xA9 2014 All Rights Reserved by Canvas Inc. ",
+	                _react2.default.createElement("br", null),
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "copyright-links" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    "Terms of Use"
+	                  ),
+	                  " / ",
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    "Privacy Policy"
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                "div",
+	                { className: "col_half col_last tright" },
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "fright clearfix" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", className: "social-icon si-small si-borderless si-facebook" },
+	                    _react2.default.createElement("i", { className: "icon-facebook" }),
+	                    _react2.default.createElement("i", { className: "icon-facebook" })
+	                  ),
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", className: "social-icon si-small si-borderless si-twitter" },
+	                    _react2.default.createElement("i", { className: "icon-twitter" }),
+	                    _react2.default.createElement("i", { className: "icon-twitter" })
+	                  ),
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", className: "social-icon si-small si-borderless si-gplus" },
+	                    _react2.default.createElement("i", { className: "icon-gplus" }),
+	                    _react2.default.createElement("i", { className: "icon-gplus" })
+	                  ),
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", "class": "social-icon si-small si-borderless si-pinterest" },
+	                    _react2.default.createElement("i", { className: "icon-pinterest" }),
+	                    _react2.default.createElement("i", { className: "icon-pinterest" })
+	                  ),
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", className: "social-icon si-small si-borderless si-vimeo" },
+	                    _react2.default.createElement("i", { className: "icon-vimeo" }),
+	                    _react2.default.createElement("i", { "class": "icon-vimeo" })
+	                  ),
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", className: "social-icon si-small si-borderless si-github" },
+	                    _react2.default.createElement("i", { className: "icon-github" }),
+	                    _react2.default.createElement("i", { className: "icon-github" })
+	                  ),
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", className: "social-icon si-small si-borderless si-yahoo" },
+	                    _react2.default.createElement("i", { className: "icon-yahoo" }),
+	                    _react2.default.createElement("i", { className: "icon-yahoo" })
+	                  ),
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#", className: "social-icon si-small si-borderless si-linkedin" },
+	                    _react2.default.createElement("i", { className: "icon-linkedin" }),
+	                    _react2.default.createElement("i", { className: "icon-linkedin" })
+	                  )
+	                ),
+	                _react2.default.createElement("div", { className: "clear" }),
+	                _react2.default.createElement("i", { className: "icon-envelope2" }),
+	                " info@canvas.com ",
+	                _react2.default.createElement(
+	                  "span",
+	                  { className: "middot" },
+	                  "\xB7"
+	                ),
+	                " ",
+	                _react2.default.createElement("i", { className: "icon-headphones" }),
+	                " +91-11-6541-6369 ",
+	                _react2.default.createElement(
+	                  "span",
+	                  { "class": "middot" },
+	                  "\xB7"
+	                ),
+	                " ",
+	                _react2.default.createElement("i", { "class": "icon-skype2" }),
+	                " CanvasOnSkype"
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Footer;
+	}(_react.Component);
+	
+	exports.default = Footer;
 
 /***/ }
 /******/ ]);

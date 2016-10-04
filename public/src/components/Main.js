@@ -6,7 +6,6 @@ class Main extends Component {
   render() {
     return (
       <div>
-          This is the Main Component
           <Home />
       </div>
     )
