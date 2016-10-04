@@ -5,7 +5,6 @@ module.exports = {
   entry: {
     app: './public/src/app.js'
   },
-
   output: {
     filename: 'public/build/bundle.js',
     sourceMapFilename: 'public/build/bundle.map'
@@ -15,13 +14,12 @@ module.exports = {
     loaders: [
       {
         exclude: /(node_modules)/,
-        test: '.jsx?$',
+        test: /\.jsx?$/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es205']
+          presets: ['react', 'es2015']
         }
       }
     ]
   }
-
 }
