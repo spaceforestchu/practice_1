@@ -24113,11 +24113,6 @@
 	                "a",
 	                { href: "index.html", "class": "standard-logo", "data-dark-logo": "images/logo-side-dark.png" },
 	                _react2.default.createElement("img", { src: "images/logo-side.png", alt: "Canvas Logo" })
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "index.html", "class": "retina-logo", "data-dark-logo": "images/logo-side-dark@2x.png" },
-	                _react2.default.createElement("img", { src: "images/logo-side@2x.png", alt: "Canvas Logo" })
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -24194,45 +24189,6 @@
 	        _react2.default.createElement(
 	          "div",
 	          { className: "content-wrap" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "promo promo-full promo-border header-stick bottommargin-lg" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "container clearfix" },
-	              _react2.default.createElement(
-	                "h3",
-	                null,
-	                "Call us today at ",
-	                _react2.default.createElement(
-	                  "span",
-	                  null,
-	                  "+91.22.57412541"
-	                ),
-	                " or Email us at ",
-	                _react2.default.createElement(
-	                  "span",
-	                  null,
-	                  "support@canvas.com"
-	                )
-	              ),
-	              _react2.default.createElement(
-	                "span",
-	                null,
-	                "We strive to provide Our Customers with Top Notch Support to make their Theme Experience Wonderful"
-	              ),
-	              _react2.default.createElement(
-	                "a",
-	                { href: "#", className: "button button-reveal button-xlarge button-rounded tright" },
-	                _react2.default.createElement("i", { className: "icon-angle-right" }),
-	                _react2.default.createElement(
-	                  "span",
-	                  null,
-	                  "Browse Now"
-	                )
-	              )
-	            )
-	          ),
 	          _react2.default.createElement(
 	            "div",
 	            { className: "container clearfix" },

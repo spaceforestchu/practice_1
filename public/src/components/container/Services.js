@@ -7,13 +7,7 @@ class Services extends Component {
 
         <div className="content-wrap">
 
-          <div className="promo promo-full promo-border header-stick bottommargin-lg">
-            <div className="container clearfix">
-              <h3>Call us today at <span>+91.22.57412541</span> or Email us at <span>support@canvas.com</span></h3>
-              <span>We strive to provide Our Customers with Top Notch Support to make their Theme Experience Wonderful</span>
-              <a href="#" className="button button-reveal button-xlarge button-rounded tright"><i className="icon-angle-right"></i><span>Browse Now</span></a>
-            </div>
-          </div>
+      
 
           <div className="container clearfix">
 
