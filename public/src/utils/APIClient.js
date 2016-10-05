@@ -11,7 +11,14 @@ export default {
         callback(err, null)
         return
       }
-      callback(null, response.body)
+
+      const resp = response.body
+      if (resp.confirmation != 'success'){
+        callback({message: resp.message}, null)
+        return
+      }
+
+      callback(null, resp)
     })
   }
 }

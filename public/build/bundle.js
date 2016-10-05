@@ -23868,7 +23868,14 @@
 	        callback(err, null);
 	        return;
 	      }
-	      callback(null, response.body);
+	
+	      var resp = response.body;
+	      if (resp.confirmation != 'success') {
+	        callback({ message: resp.message }, null);
+	        return;
+	      }
+	
+	      callback(null, resp);
 	    });
 	  }
 	};
