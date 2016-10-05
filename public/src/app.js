@@ -14,27 +14,28 @@ class App extends Component {
 
   componentWillMount(){
     var location = window.location
-    console.log('full: ' + location)
+    //console.log('full: ' + location)
 
     var page =  location.pathname
-    console.log("componentWillMount: " + page)
+    //console.log("componentWillMount: " + page)
 
     var queryParamsStr = window.location.search
-    console.log('SEARCH: ' + queryParamsStr)
+    //console.log('SEARCH: ' + queryParamsStr)
+
 
     if(queryParamsStr.length > 0){
       var params = {}
       queryParamsStr = queryParamsStr.replace('?', '')
       var parts = queryParamsStr.split('&')
       parts.forEach(function(part){
-        console.log('PARAMS: ' + part)
+        //console.log('PARAMS: ' + part)
         if (part.indexOf('=' != -1)){
           var keyValue = part.split('=')
           params[keyValue[0]] = keyValue[1]
 
         }
       })
-      console.log('PARAMS:' + JSON.stringify(params))
+      //console.log('PARAMS:' + JSON.stringify(params))
       this.setState({
         page: page,
         params: params
@@ -50,7 +51,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <Main  page={this.state.page}/>
+          <Main  page={this.state.page} params={this.state.params}/>
       </div>
     )
   }

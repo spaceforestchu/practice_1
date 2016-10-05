@@ -5,11 +5,13 @@ import {Home, Search} from './layout'
 
 class Main extends Component {
 
-  componentDidMount(){
-    console.log('Page = ' + this.props.page)
+  componentWillMount(){
+    // console.log('Page = ' + this.props.page)
+    // console.log('Params = ' + JSON.stringify(this.props.params))
+
   }
   render() {
-    const layout = (this.props.page == '/') ? <Home /> : <Search />
+    const layout = (this.props.page == '/') ? <Home /> : <Search params={this.props.params}/>
     return (
       <div>
           {layout}

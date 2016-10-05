@@ -87,26 +87,27 @@
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      var location = window.location;
-	      console.log('full: ' + location);
+	      //console.log('full: ' + location)
 	
 	      var page = location.pathname;
-	      console.log("componentWillMount: " + page);
+	      //console.log("componentWillMount: " + page)
 	
 	      var queryParamsStr = window.location.search;
-	      console.log('SEARCH: ' + queryParamsStr);
+	      //console.log('SEARCH: ' + queryParamsStr)
+	
 	
 	      if (queryParamsStr.length > 0) {
 	        var params = {};
 	        queryParamsStr = queryParamsStr.replace('?', '');
 	        var parts = queryParamsStr.split('&');
 	        parts.forEach(function (part) {
-	          console.log('PARAMS: ' + part);
+	          //console.log('PARAMS: ' + part)
 	          if (part.indexOf('=' != -1)) {
 	            var keyValue = part.split('=');
 	            params[keyValue[0]] = keyValue[1];
 	          }
 	        });
-	        console.log('PARAMS:' + JSON.stringify(params));
+	        //console.log('PARAMS:' + JSON.stringify(params))
 	        this.setState({
 	          page: page,
 	          params: params
@@ -123,7 +124,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Main2.default, { page: this.state.page })
+	        _react2.default.createElement(_Main2.default, { page: this.state.page, params: this.state.params })
 	      );
 	    }
 	  }]);
@@ -21539,14 +21540,16 @@
 	  }
 	
 	  _createClass(Main, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      console.log('Page = ' + this.props.page);
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      // console.log('Page = ' + this.props.page)
+	      // console.log('Params = ' + JSON.stringify(this.props.params))
+	
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var layout = this.props.page == '/' ? _react2.default.createElement(_layout.Home, null) : _react2.default.createElement(_layout.Search, null);
+	      var layout = this.props.page == '/' ? _react2.default.createElement(_layout.Home, null) : _react2.default.createElement(_layout.Search, { params: this.props.params });
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -23965,6 +23968,11 @@
 	  }
 	
 	  _createClass(Search, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      console.log('Params = ' + JSON.stringify(this.props.params));
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
