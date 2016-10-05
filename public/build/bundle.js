@@ -23950,9 +23950,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _APIClient = __webpack_require__(181);
-	
-	var _APIClient2 = _interopRequireDefault(_APIClient);
+	var _utils = __webpack_require__(184);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -23974,9 +23972,9 @@
 	  _createClass(Search, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
-	      console.log('Params = ' + JSON.stringify(this.props.params));
+	      //console.log('Params = ' + JSON.stringify(this.props.params))
 	
-	      _APIClient2.default.get('/api/service', this.props.params, function (err, response) {
+	      _utils.APIClient.get('/api/service', this.props.params, function (err, response) {
 	        if (err) {
 	          alert(err);
 	          return;
@@ -24024,6 +24022,25 @@
 	
 	exports.Home = _Home2.default;
 	exports.Search = _Search2.default;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.APIClient = undefined;
+	
+	var _APIClient = __webpack_require__(181);
+	
+	var _APIClient2 = _interopRequireDefault(_APIClient);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.APIClient = _APIClient2.default;
 
 /***/ }
 /******/ ]);

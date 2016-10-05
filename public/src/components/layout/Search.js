@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import APIClient from '../../utils/APIClient'
+import { APIClient } from '../../utils'
 
 class Search extends Component {
 
   componentWillMount() {
-    console.log('Params = ' + JSON.stringify(this.props.params))
+    //console.log('Params = ' + JSON.stringify(this.props.params))
 
     APIClient.get('/api/service', this.props.params, (err, response) => {
       if (err) {
