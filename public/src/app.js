@@ -51,7 +51,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <Main  page={this.state.page} params={this.state.params}/>
+          <Main page={this.state.page} params={this.state.params}/>
       </div>
     )
   }

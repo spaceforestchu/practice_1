@@ -23982,27 +23982,13 @@
 	  }
 	
 	  _createClass(Search, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      //console.log('Params = ' + JSON.stringify(this.props.params))
-	
-	      _utils.APIClient.get('/api/service', this.props.params, function (err, response) {
-	        if (err) {
-	          alert(err);
-	          return;
-	        }
-	
-	        console.log(JSON.stringify(response));
-	      });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_Sidebar2.default, null),
-	        _react2.default.createElement(_Services2.default, null),
+	        _react2.default.createElement(_Services2.default, { params: this.props.params }),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -24151,7 +24137,107 @@
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _utils = __webpack_require__(184);
+	
+	var _ServicePreview = __webpack_require__(187);
+	
+	var _ServicePreview2 = _interopRequireDefault(_ServicePreview);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Services = function (_Component) {
+	  _inherits(Services, _Component);
+	
+	  function Services() {
+	    _classCallCheck(this, Services);
+	
+	    var _this = _possibleConstructorReturn(this, (Services.__proto__ || Object.getPrototypeOf(Services)).call(this));
+	
+	    _this.state = {
+	      services: []
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(Services, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      var _this2 = this;
+	
+	      //console.log('Params = ' + JSON.stringify(this.props.params))
+	
+	      _utils.APIClient.get('/api/service', this.props.params, function (err, response) {
+	        if (err) {
+	          alert(err);
+	          return;
+	        }
+	
+	        console.log(JSON.stringify(response));
+	
+	        _this2.setState({
+	          services: response.results
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	
+	      var services = this.state.services.map(function (service, i) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: service.id },
+	          _react2.default.createElement(_ServicePreview2.default, { data: service.timestamp })
+	        );
+	      });
+	      return _react2.default.createElement(
+	        'section',
+	        { id: 'content' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'content-wrap' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'container clearfix' },
+	            _react2.default.createElement(
+	              'ul',
+	              { style: { listStyleType: 'none' } },
+	              services
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Services;
+	}(_react.Component);
+	
+	exports.default = Services;
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -24171,34 +24257,34 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Services = function (_Component) {
-	  _inherits(Services, _Component);
+	var ServicePreview = function (_Component) {
+	  _inherits(ServicePreview, _Component);
 	
-	  function Services() {
-	    _classCallCheck(this, Services);
+	  function ServicePreview() {
+	    _classCallCheck(this, ServicePreview);
 	
-	    return _possibleConstructorReturn(this, (Services.__proto__ || Object.getPrototypeOf(Services)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (ServicePreview.__proto__ || Object.getPrototypeOf(ServicePreview)).apply(this, arguments));
 	  }
 	
-	  _createClass(Services, [{
-	    key: "render",
+	  _createClass(ServicePreview, [{
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "section",
-	        { id: "content" },
+	        'div',
+	        { style: { background: 'white', padding: 16, border: '1px solid #ddd' } },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "content-wrap" },
-	          _react2.default.createElement("div", { className: "container clearfix" })
+	          'h1',
+	          null,
+	          this.props.data
 	        )
 	      );
 	    }
 	  }]);
 	
-	  return Services;
+	  return ServicePreview;
 	}(_react.Component);
 	
-	exports.default = Services;
+	exports.default = ServicePreview;
 
 /***/ }
 /******/ ]);
