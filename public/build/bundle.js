@@ -23952,6 +23952,18 @@
 	
 	var _utils = __webpack_require__(184);
 	
+	var _Sidebar = __webpack_require__(185);
+	
+	var _Sidebar2 = _interopRequireDefault(_Sidebar);
+	
+	var _Services = __webpack_require__(186);
+	
+	var _Services2 = _interopRequireDefault(_Services);
+	
+	var _Footer = __webpack_require__(174);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23989,7 +24001,9 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'This is the seach layout'
+	        _react2.default.createElement(_Sidebar2.default, null),
+	        _react2.default.createElement(_Services2.default, null),
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
@@ -24041,6 +24055,360 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.APIClient = _APIClient2.default;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Sidebar = function (_Component) {
+	  _inherits(Sidebar, _Component);
+	
+	  function Sidebar() {
+	    _classCallCheck(this, Sidebar);
+	
+	    return _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).apply(this, arguments));
+	  }
+	
+	  _createClass(Sidebar, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "header",
+	        { id: "header", classNamme: "no-sticky" },
+	        _react2.default.createElement(
+	          "div",
+	          { id: "header-wrap" },
+	          _react2.default.createElement(
+	            "div",
+	            { "class": "container clearfix" },
+	            _react2.default.createElement(
+	              "div",
+	              { id: "primary-menu-trigger" },
+	              _react2.default.createElement("i", { classNamme: "icon-reorder" })
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { id: "logo", "class": "nobottomborder" },
+	              _react2.default.createElement(
+	                "a",
+	                { href: "index.html", "class": "standard-logo", "data-dark-logo": "images/logo-side-dark.png" },
+	                _react2.default.createElement("img", { src: "images/logo-side.png", alt: "Canvas Logo" })
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "index.html", "class": "retina-logo", "data-dark-logo": "images/logo-side-dark@2x.png" },
+	                _react2.default.createElement("img", { src: "images/logo-side@2x.png", alt: "Canvas Logo" })
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "nav",
+	              { id: "primary-menu" },
+	              _react2.default.createElement(
+	                "ul",
+	                null,
+	                _react2.default.createElement(
+	                  "li",
+	                  null,
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "index.html" },
+	                    _react2.default.createElement(
+	                      "div",
+	                      null,
+	                      "Home"
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Sidebar;
+	}(_react.Component);
+	
+	exports.default = Sidebar;
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Services = function (_Component) {
+	  _inherits(Services, _Component);
+	
+	  function Services() {
+	    _classCallCheck(this, Services);
+	
+	    return _possibleConstructorReturn(this, (Services.__proto__ || Object.getPrototypeOf(Services)).apply(this, arguments));
+	  }
+	
+	  _createClass(Services, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "section",
+	        { id: "content" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "content-wrap" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "promo promo-full promo-border header-stick bottommargin-lg" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "container clearfix" },
+	              _react2.default.createElement(
+	                "h3",
+	                null,
+	                "Call us today at ",
+	                _react2.default.createElement(
+	                  "span",
+	                  null,
+	                  "+91.22.57412541"
+	                ),
+	                " or Email us at ",
+	                _react2.default.createElement(
+	                  "span",
+	                  null,
+	                  "support@canvas.com"
+	                )
+	              ),
+	              _react2.default.createElement(
+	                "span",
+	                null,
+	                "We strive to provide Our Customers with Top Notch Support to make their Theme Experience Wonderful"
+	              ),
+	              _react2.default.createElement(
+	                "a",
+	                { href: "#", className: "button button-reveal button-xlarge button-rounded tright" },
+	                _react2.default.createElement("i", { className: "icon-angle-right" }),
+	                _react2.default.createElement(
+	                  "span",
+	                  null,
+	                  "Browse Now"
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "container clearfix" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "col_one_third" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "feature-box fbox-effect" },
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "fbox-icon" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    _react2.default.createElement("i", { className: "icon-screen i-alt" })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  "h3",
+	                  null,
+	                  "Responsive Layout"
+	                ),
+	                _react2.default.createElement(
+	                  "p",
+	                  null,
+	                  "Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view."
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "col_one_third" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "feature-box fbox-effect" },
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "fbox-icon" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    _react2.default.createElement("i", { className: "icon-eye i-alt" })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  "h3",
+	                  null,
+	                  "Retina Ready Graphics"
+	                ),
+	                _react2.default.createElement(
+	                  "p",
+	                  null,
+	                  "Looks beautiful & ultra-sharp on Retina Screen Displays. Retina Icons, Fonts & all others graphics are optimized."
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "col_one_third col_last" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "feature-box fbox-effect" },
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "fbox-icon" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    _react2.default.createElement("i", { className: "icon-beaker i-alt" })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  "h3",
+	                  null,
+	                  "Powerful Performance"
+	                ),
+	                _react2.default.createElement(
+	                  "p",
+	                  null,
+	                  "Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance."
+	                )
+	              )
+	            ),
+	            _react2.default.createElement("div", { className: "clear" }),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "col_one_third nobottommargin" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "feature-box fbox-effect" },
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "fbox-icon" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    _react2.default.createElement("i", { className: "icon-stack i-alt" })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  "h3",
+	                  null,
+	                  "Premium Sliders Included"
+	                ),
+	                _react2.default.createElement(
+	                  "p",
+	                  null,
+	                  "Canvas included 20+ custom designed Slider Pages with Premium Sliders like Layer, Revolution, Swiper & others."
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "col_one_third nobottommargin" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "feature-box fbox-effect" },
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "fbox-icon" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    _react2.default.createElement("i", { className: "icon-tint i-alt" })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  "h3",
+	                  null,
+	                  "Unlimited Color Options"
+	                ),
+	                _react2.default.createElement(
+	                  "p",
+	                  null,
+	                  "Change the color scheme of the Theme in a flash just by changing the 6-digit HEX code in the colors.php file."
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "col_one_third nobottommargin col_last" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "feature-box fbox-effect" },
+	                _react2.default.createElement(
+	                  "div",
+	                  { className: "fbox-icon" },
+	                  _react2.default.createElement(
+	                    "a",
+	                    { href: "#" },
+	                    _react2.default.createElement("i", { className: "icon-text-width i-alt" })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  "h3",
+	                  null,
+	                  "CUSTOMIZABLE FONTS"
+	                ),
+	                _react2.default.createElement(
+	                  "p",
+	                  null,
+	                  "Use any Font you like from Google Web Fonts, Typekit or other Web Fonts. They will blend in perfectly."
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Services;
+	}(_react.Component);
+	
+	exports.default = Services;
 
 /***/ }
 /******/ ]);

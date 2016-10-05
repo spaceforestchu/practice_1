@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { APIClient } from '../../utils'
+import Sidebar from '../container/Sidebar'
+import Services from '../container/Services'
+import Footer from '../view/Footer'
 
 class Search extends Component {
 
@@ -20,7 +23,9 @@ class Search extends Component {
   render(){
     return (
       <div>
-        This is the seach layout
+        <Sidebar />
+        <Services />
+        <Footer />
       </div>
     )
   }
