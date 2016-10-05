@@ -4,6 +4,10 @@ import React, { Component } from 'react'
 import {Home, Search} from './layout'
 
 class Main extends Component {
+
+  componentDidMount(){
+    console.log('Page = ' + this.props.page)
+  }
   render() {
     return (
       <div>

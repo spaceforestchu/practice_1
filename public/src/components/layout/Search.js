@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 
 class Search extends Component {
 
-  componentWillMount(){
-    console.log("componentWillMount")
-  }
-
   render(){
     return (
       <div>

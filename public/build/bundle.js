@@ -74,16 +74,32 @@
 	  function App() {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+	
+	    _this.state = {
+	      page: ''
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(App, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      var location = window.location;
+	      console.log('full: ' + location);
+	      var page = location.pathname;
+	      console.log("componentWillMount: " + page);
+	      this.setState({
+	        page: page
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Main2.default, null)
+	        _react2.default.createElement(_Main2.default, { page: this.state.page })
 	      );
 	    }
 	  }]);
@@ -21499,6 +21515,11 @@
 	  }
 	
 	  _createClass(Main, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      console.log('Page = ' + this.props.page);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -23889,7 +23910,7 @@
 /* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -23919,17 +23940,12 @@
 	  }
 	
 	  _createClass(Search, [{
-	    key: "componentWillMount",
-	    value: function componentWillMount() {
-	      console.log("componentWillMount");
-	    }
-	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
-	        "This is the seach layout"
+	        'This is the seach layout'
 	      );
 	    }
 	  }]);
