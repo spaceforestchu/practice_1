@@ -12,7 +12,7 @@ class Main extends Component {
     const layout = (this.props.page == '/') ? <Home /> : <Search />
     return (
       <div>
-          {{layout}}
+          {layout}
       </div>
     )
   }
