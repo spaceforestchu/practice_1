@@ -23950,6 +23950,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _APIClient = __webpack_require__(181);
+	
+	var _APIClient2 = _interopRequireDefault(_APIClient);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23971,6 +23975,15 @@
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      console.log('Params = ' + JSON.stringify(this.props.params));
+	
+	      _APIClient2.default.get('/api/service', this.props.params, function (err, response) {
+	        if (err) {
+	          alert(err);
+	          return;
+	        }
+	
+	        console.log(JSON.stringify(response));
+	      });
 	    }
 	  }, {
 	    key: 'render',
