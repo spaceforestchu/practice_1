@@ -24,13 +24,16 @@ class Home extends Component {
     event.preventDefault()
     console.log("search services :" + this.state.zipCode)
 
-    APIClient.get('/api/service', null, (err, json) => {
-      if(err){
-        alert(err.message)
-        return
-      }
-      console.log(JSON.stringify(json))
-    })
+    // tells the window to go to the url
+    window.location.href = '/search?zip=' + this.state.zipCode
+
+    // APIClient.get('/api/service', null, (err, json) => {
+    //   if(err){
+    //     alert(err.message)
+    //     return
+    //   }
+    //   console.log(JSON.stringify(json))
+    // })
 
 
     // superagent

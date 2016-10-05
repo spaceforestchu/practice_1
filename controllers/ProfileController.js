@@ -13,7 +13,7 @@ module.exports = {
         var list = []
         for(var i = 0; i < profiles.length; i++) {
           var profile = profiles[i]
-          list.push(profile.summary())
+          list.push(profile.summary()) //have to use the summary function to hite it
         }
         resolve(list)
       })
