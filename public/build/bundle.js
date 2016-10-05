@@ -21522,7 +21522,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var layout = this.state.page == '/' ? _react2.default.createElement(_layout.Home, null) : _react2.default.createElement(_layout.Search, null);
+	      var layout = this.props.page == '/' ? _react2.default.createElement(_layout.Home, null) : _react2.default.createElement(_layout.Search, null);
 	      return _react2.default.createElement(
 	        'div',
 	        null,

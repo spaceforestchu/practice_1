@@ -9,7 +9,7 @@ class Main extends Component {
     console.log('Page = ' + this.props.page)
   }
   render() {
-    const layout = (this.state.page == '/') ? <Home /> : <Search />
+    const layout = (this.props.page == '/') ? <Home /> : <Search />
     return (
       <div>
           {{layout}}
