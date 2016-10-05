@@ -23889,7 +23889,7 @@
 /* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -23919,12 +23919,17 @@
 	  }
 	
 	  _createClass(Search, [{
-	    key: 'render',
+	    key: "componentWillMount",
+	    value: function componentWillMount() {
+	      console.log("componentWillMount");
+	    }
+	  }, {
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
-	        'This is the seach layout'
+	        "This is the seach layout"
 	      );
 	    }
 	  }]);
