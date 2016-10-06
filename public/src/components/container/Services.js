@@ -1,6 +1,6 @@
 import React , { Component } from 'react'
 import { APIClient } from '../../utils'
-import ServicePreview from '../view/ServicePreview'
+import { Footer, ServicePreview} from '../view/index'
 class Services extends Component {
 
   constructor(){
@@ -33,24 +33,16 @@ class Services extends Component {
     const services = this.state.services.map((service, i) => {
       return (
         <li key={service.id}>
-          <ServicePreview data={service.timestamp} />
+          <ServicePreview service={service} />
         </li>
       )
     })
     return (
-      <section id="content">
+      <div className="container clearfix">
 
-        <div className="content-wrap">
+          <ul style={{listStyleType: 'none'}}>{services}</ul>
 
-          <div className="container clearfix">
-
-              <ul style={{listStyleType: 'none'}}>{services}</ul>
-
-          </div>
-
-        </div>
-
-      </section>
+      </div>
     )
   }
 }

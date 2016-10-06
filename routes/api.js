@@ -176,7 +176,7 @@ router.put('/:resource/:id', function(req, res, next){
   //       confirmation: 'success',
   //       result: result
   //     })
-  //
+  //    return 
   //   })
   // }
 

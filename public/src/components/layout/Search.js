@@ -9,8 +9,18 @@ class Search extends Component {
   render(){
     return (
       <div>
-        <Sidebar />
-        <Services params={this.props.params}/>
+
+          <header id="header" classNamme="no-sticky">
+            <div id="header-wrap">
+
+            </div>
+          </header>
+
+          <section id="content">
+            <div className="content-wrap">
+              
+            </div>
+          </section>
         <Footer />
       </div>
     )

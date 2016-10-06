@@ -21517,7 +21517,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _layout = __webpack_require__(183);
+	var _layout = __webpack_require__(173);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21572,6 +21572,30 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.Search = exports.Home = undefined;
+	
+	var _Home = __webpack_require__(174);
+	
+	var _Home2 = _interopRequireDefault(_Home);
+	
+	var _Search = __webpack_require__(183);
+	
+	var _Search2 = _interopRequireDefault(_Search);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.Home = _Home2.default;
+	exports.Search = _Search2.default;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -21579,19 +21603,19 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Footer = __webpack_require__(174);
+	var _Footer = __webpack_require__(175);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _Nav = __webpack_require__(175);
+	var _Nav = __webpack_require__(176);
 	
 	var _Nav2 = _interopRequireDefault(_Nav);
 	
-	var _superagent = __webpack_require__(176);
+	var _superagent = __webpack_require__(177);
 	
 	var _superagent2 = _interopRequireDefault(_superagent);
 	
-	var _APIClient = __webpack_require__(181);
+	var _APIClient = __webpack_require__(182);
 	
 	var _APIClient2 = _interopRequireDefault(_APIClient);
 	
@@ -22015,10 +22039,10 @@
 	exports.default = Home;
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -22029,6 +22053,10 @@
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _styles = __webpack_require__(190);
+	
+	var _styles2 = _interopRequireDefault(_styles);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22048,116 +22076,116 @@
 	  }
 	
 	  _createClass(Footer, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "footer",
-	          { id: "footer", className: "dark" },
-	          _react2.default.createElement("div", { className: "container" }),
+	          'footer',
+	          { id: 'footer', className: 'dark' },
+	          _react2.default.createElement('div', { className: 'container' }),
 	          _react2.default.createElement(
-	            "div",
-	            { id: "copyrights" },
+	            'div',
+	            { id: 'copyrights' },
 	            _react2.default.createElement(
-	              "div",
-	              { className: "container clearfix" },
+	              'div',
+	              { className: 'container clearfix' },
 	              _react2.default.createElement(
-	                "div",
-	                { className: "col_half" },
-	                "Copyrights \xA9 2014 All Rights Reserved by Canvas Inc. ",
-	                _react2.default.createElement("br", null),
+	                'div',
+	                { className: 'col_half' },
+	                'Copyrights \xA9 2014 All Rights Reserved by Canvas Inc. ',
+	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
-	                  "div",
-	                  { className: "copyright-links" },
+	                  'div',
+	                  { className: 'copyright-links' },
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#" },
-	                    "Terms of Use"
+	                    'a',
+	                    { href: '#' },
+	                    'Terms of Use'
 	                  ),
-	                  " / ",
+	                  ' / ',
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#" },
-	                    "Privacy Policy"
+	                    'a',
+	                    { href: '#' },
+	                    'Privacy Policy'
 	                  )
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "div",
-	                { className: "col_half col_last tright" },
+	                'div',
+	                { className: 'col_half col_last tright' },
 	                _react2.default.createElement(
-	                  "div",
-	                  { className: "fright clearfix" },
+	                  'div',
+	                  { className: 'fright clearfix' },
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", className: "social-icon si-small si-borderless si-facebook" },
-	                    _react2.default.createElement("i", { className: "icon-facebook" }),
-	                    _react2.default.createElement("i", { className: "icon-facebook" })
+	                    'a',
+	                    { href: '#', className: 'social-icon si-small si-borderless si-facebook' },
+	                    _react2.default.createElement('i', { className: 'icon-facebook' }),
+	                    _react2.default.createElement('i', { className: 'icon-facebook' })
 	                  ),
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", className: "social-icon si-small si-borderless si-twitter" },
-	                    _react2.default.createElement("i", { className: "icon-twitter" }),
-	                    _react2.default.createElement("i", { className: "icon-twitter" })
+	                    'a',
+	                    { href: '#', className: 'social-icon si-small si-borderless si-twitter' },
+	                    _react2.default.createElement('i', { className: 'icon-twitter' }),
+	                    _react2.default.createElement('i', { className: 'icon-twitter' })
 	                  ),
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", className: "social-icon si-small si-borderless si-gplus" },
-	                    _react2.default.createElement("i", { className: "icon-gplus" }),
-	                    _react2.default.createElement("i", { className: "icon-gplus" })
+	                    'a',
+	                    { href: '#', className: 'social-icon si-small si-borderless si-gplus' },
+	                    _react2.default.createElement('i', { className: 'icon-gplus' }),
+	                    _react2.default.createElement('i', { className: 'icon-gplus' })
 	                  ),
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", "class": "social-icon si-small si-borderless si-pinterest" },
-	                    _react2.default.createElement("i", { className: "icon-pinterest" }),
-	                    _react2.default.createElement("i", { className: "icon-pinterest" })
+	                    'a',
+	                    { href: '#', 'class': 'social-icon si-small si-borderless si-pinterest' },
+	                    _react2.default.createElement('i', { className: 'icon-pinterest' }),
+	                    _react2.default.createElement('i', { className: 'icon-pinterest' })
 	                  ),
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", className: "social-icon si-small si-borderless si-vimeo" },
-	                    _react2.default.createElement("i", { className: "icon-vimeo" }),
-	                    _react2.default.createElement("i", { "class": "icon-vimeo" })
+	                    'a',
+	                    { href: '#', className: 'social-icon si-small si-borderless si-vimeo' },
+	                    _react2.default.createElement('i', { className: 'icon-vimeo' }),
+	                    _react2.default.createElement('i', { 'class': 'icon-vimeo' })
 	                  ),
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", className: "social-icon si-small si-borderless si-github" },
-	                    _react2.default.createElement("i", { className: "icon-github" }),
-	                    _react2.default.createElement("i", { className: "icon-github" })
+	                    'a',
+	                    { href: '#', className: 'social-icon si-small si-borderless si-github' },
+	                    _react2.default.createElement('i', { className: 'icon-github' }),
+	                    _react2.default.createElement('i', { className: 'icon-github' })
 	                  ),
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", className: "social-icon si-small si-borderless si-yahoo" },
-	                    _react2.default.createElement("i", { className: "icon-yahoo" }),
-	                    _react2.default.createElement("i", { className: "icon-yahoo" })
+	                    'a',
+	                    { href: '#', className: 'social-icon si-small si-borderless si-yahoo' },
+	                    _react2.default.createElement('i', { className: 'icon-yahoo' }),
+	                    _react2.default.createElement('i', { className: 'icon-yahoo' })
 	                  ),
 	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "#", className: "social-icon si-small si-borderless si-linkedin" },
-	                    _react2.default.createElement("i", { className: "icon-linkedin" }),
-	                    _react2.default.createElement("i", { className: "icon-linkedin" })
+	                    'a',
+	                    { href: '#', className: 'social-icon si-small si-borderless si-linkedin' },
+	                    _react2.default.createElement('i', { className: 'icon-linkedin' }),
+	                    _react2.default.createElement('i', { className: 'icon-linkedin' })
 	                  )
 	                ),
-	                _react2.default.createElement("div", { className: "clear" }),
-	                _react2.default.createElement("i", { className: "icon-envelope2" }),
-	                " info@canvas.com ",
+	                _react2.default.createElement('div', { className: 'clear' }),
+	                _react2.default.createElement('i', { className: 'icon-envelope2' }),
+	                ' info@canvas.com ',
 	                _react2.default.createElement(
-	                  "span",
-	                  { className: "middot" },
-	                  "\xB7"
+	                  'span',
+	                  { className: 'middot' },
+	                  '\xB7'
 	                ),
-	                " ",
-	                _react2.default.createElement("i", { className: "icon-headphones" }),
-	                " +91-11-6541-6369 ",
+	                ' ',
+	                _react2.default.createElement('i', { className: 'icon-headphones' }),
+	                ' +91-11-6541-6369 ',
 	                _react2.default.createElement(
-	                  "span",
-	                  { className: "middot" },
-	                  "\xB7"
+	                  'span',
+	                  { className: 'middot' },
+	                  '\xB7'
 	                ),
-	                " ",
-	                _react2.default.createElement("i", { className: "icon-skype2" }),
-	                " CanvasOnSkype"
+	                ' ',
+	                _react2.default.createElement('i', { className: 'icon-skype2' }),
+	                ' CanvasOnSkype'
 	              )
 	            )
 	          )
@@ -22172,7 +22200,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -22314,7 +22342,7 @@
 	exports.default = Nav;
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22331,9 +22359,9 @@
 	  root = this;
 	}
 	
-	var Emitter = __webpack_require__(177);
-	var requestBase = __webpack_require__(178);
-	var isObject = __webpack_require__(179);
+	var Emitter = __webpack_require__(178);
+	var requestBase = __webpack_require__(179);
+	var isObject = __webpack_require__(180);
 	
 	/**
 	 * Noop.
@@ -22345,7 +22373,7 @@
 	 * Expose `request`.
 	 */
 	
-	var request = module.exports = __webpack_require__(180).bind(null, Request);
+	var request = module.exports = __webpack_require__(181).bind(null, Request);
 	
 	/**
 	 * Determine XHR.
@@ -23296,7 +23324,7 @@
 
 
 /***/ },
-/* 177 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -23465,13 +23493,13 @@
 
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Module of mixed-in functions shared between node and client code
 	 */
-	var isObject = __webpack_require__(179);
+	var isObject = __webpack_require__(180);
 	
 	/**
 	 * Clear previous timeout.
@@ -23843,7 +23871,7 @@
 
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports) {
 
 	/**
@@ -23862,7 +23890,7 @@
 
 
 /***/ },
-/* 180 */
+/* 181 */
 /***/ function(module, exports) {
 
 	// The node and browser modules expose versions of this with the
@@ -23900,7 +23928,7 @@
 
 
 /***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23909,7 +23937,7 @@
 	  value: true
 	});
 	
-	var _superagent = __webpack_require__(176);
+	var _superagent = __webpack_require__(177);
 	
 	var _superagent2 = _interopRequireDefault(_superagent);
 	
@@ -23935,7 +23963,7 @@
 	};
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23960,7 +23988,7 @@
 	
 	var _Services2 = _interopRequireDefault(_Services);
 	
-	var _Footer = __webpack_require__(174);
+	var _Footer = __webpack_require__(175);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
@@ -23987,8 +24015,16 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Sidebar2.default, null),
-	        _react2.default.createElement(_Services2.default, { params: this.props.params }),
+	        _react2.default.createElement(
+	          'header',
+	          { id: 'header', classNamme: 'no-sticky' },
+	          _react2.default.createElement('div', { id: 'header-wrap' })
+	        ),
+	        _react2.default.createElement(
+	          'section',
+	          { id: 'content' },
+	          _react2.default.createElement('div', { className: 'content-wrap' })
+	        ),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -23998,30 +24034,6 @@
 	}(_react.Component);
 	
 	exports.default = Search;
-
-/***/ },
-/* 183 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.Search = exports.Home = undefined;
-	
-	var _Home = __webpack_require__(173);
-	
-	var _Home2 = _interopRequireDefault(_Home);
-	
-	var _Search = __webpack_require__(182);
-	
-	var _Search2 = _interopRequireDefault(_Search);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.Home = _Home2.default;
-	exports.Search = _Search2.default;
 
 /***/ },
 /* 184 */
@@ -24034,7 +24046,7 @@
 	});
 	exports.APIClient = undefined;
 	
-	var _APIClient = __webpack_require__(181);
+	var _APIClient = __webpack_require__(182);
 	
 	var _APIClient2 = _interopRequireDefault(_APIClient);
 	
@@ -24079,46 +24091,38 @@
 	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "header",
-	        { id: "header", classNamme: "no-sticky" },
+	        "div",
+	        { "class": "container clearfix" },
 	        _react2.default.createElement(
 	          "div",
-	          { id: "header-wrap" },
+	          { id: "primary-menu-trigger" },
+	          _react2.default.createElement("i", { classNamme: "icon-reorder" })
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { id: "logo", "class": "nobottomborder" },
 	          _react2.default.createElement(
-	            "div",
-	            { "class": "container clearfix" },
+	            "a",
+	            { href: "index.html", "class": "standard-logo", "data-dark-logo": "images/logo-side-dark.png" },
+	            _react2.default.createElement("img", { src: "images/logo-side.png", alt: "Canvas Logo" })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "nav",
+	          { id: "primary-menu" },
+	          _react2.default.createElement(
+	            "ul",
+	            null,
 	            _react2.default.createElement(
-	              "div",
-	              { id: "primary-menu-trigger" },
-	              _react2.default.createElement("i", { classNamme: "icon-reorder" })
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { id: "logo", "class": "nobottomborder" },
+	              "li",
+	              null,
 	              _react2.default.createElement(
 	                "a",
-	                { href: "index.html", "class": "standard-logo", "data-dark-logo": "images/logo-side-dark.png" },
-	                _react2.default.createElement("img", { src: "images/logo-side.png", alt: "Canvas Logo" })
-	              )
-	            ),
-	            _react2.default.createElement(
-	              "nav",
-	              { id: "primary-menu" },
-	              _react2.default.createElement(
-	                "ul",
-	                null,
+	                { href: "index.html" },
 	                _react2.default.createElement(
-	                  "li",
+	                  "div",
 	                  null,
-	                  _react2.default.createElement(
-	                    "a",
-	                    { href: "index.html" },
-	                    _react2.default.createElement(
-	                      "div",
-	                      null,
-	                      "Home"
-	                    )
-	                  )
+	                  "Home"
 	                )
 	              )
 	            )
@@ -24151,9 +24155,7 @@
 	
 	var _utils = __webpack_require__(184);
 	
-	var _ServicePreview = __webpack_require__(187);
-	
-	var _ServicePreview2 = _interopRequireDefault(_ServicePreview);
+	var _index = __webpack_require__(188);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -24205,24 +24207,16 @@
 	        return _react2.default.createElement(
 	          'li',
 	          { key: service.id },
-	          _react2.default.createElement(_ServicePreview2.default, { data: service.timestamp })
+	          _react2.default.createElement(_index.ServicePreview, { service: service })
 	        );
 	      });
 	      return _react2.default.createElement(
-	        'section',
-	        { id: 'content' },
+	        'div',
+	        { className: 'container clearfix' },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'content-wrap' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'container clearfix' },
-	            _react2.default.createElement(
-	              'ul',
-	              { style: { listStyleType: 'none' } },
-	              services
-	            )
-	          )
+	          'ul',
+	          { style: { listStyleType: 'none' } },
+	          services
 	        )
 	      );
 	    }
@@ -24249,6 +24243,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _styles = __webpack_require__(190);
+	
+	var _styles2 = _interopRequireDefault(_styles);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24269,13 +24267,35 @@
 	  _createClass(ServicePreview, [{
 	    key: 'render',
 	    value: function render() {
+	
+	      var style = _styles2.default.ServicePreview;
+	      var service = this.props.service;
 	      return _react2.default.createElement(
 	        'div',
-	        { style: { background: 'white', padding: 16, border: '1px solid #ddd' } },
+	        { style: style.container },
 	        _react2.default.createElement(
-	          'h1',
+	          'span',
+	          { style: style.span },
+	          '$',
+	          service.price
+	        ),
+	        _react2.default.createElement(
+	          'h3',
+	          { style: style.h3 },
+	          service.title
+	        ),
+	        _react2.default.createElement('hr', { style: style.hr }),
+	        _react2.default.createElement(
+	          'p',
 	          null,
-	          this.props.data
+	          ' ',
+	          service.description
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: '#', className: 'button button-border button-border-thin button-aqua' },
+	          _react2.default.createElement('i', { className: 'icon-inbox' }),
+	          'View'
 	        )
 	      );
 	    }
@@ -24285,6 +24305,63 @@
 	}(_react.Component);
 	
 	exports.default = ServicePreview;
+
+/***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.ServicePreview = exports.Footer = undefined;
+	
+	var _Footer = __webpack_require__(175);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
+	
+	var _ServicePreview = __webpack_require__(187);
+	
+	var _ServicePreview2 = _interopRequireDefault(_ServicePreview);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.Footer = _Footer2.default;
+	exports.ServicePreview = _ServicePreview2.default;
+
+/***/ },
+/* 189 */,
+/* 190 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	
+	  ServicePreview: {
+	
+	    container: {
+	      background: 'white',
+	      padding: 16,
+	      border: '1px solid #ddd'
+	    },
+	    h3: {
+	      marginBotton: 0
+	    },
+	
+	    hr: {
+	      borderTop: '1px solid #888'
+	    },
+	    span: {
+	      float: 'right'
+	    }
+	  }
+	
+	};
 
 /***/ }
 /******/ ]);
