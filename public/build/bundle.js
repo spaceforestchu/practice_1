@@ -24380,6 +24380,8 @@
 	  value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(1);
@@ -24405,12 +24407,29 @@
 	    var _this = _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this));
 	
 	    _this.state = {
-	      map: null
+	      map: null,
+	      markers: [{
+	        defaultAnimation: 2,
+	        position: {
+	          lat: 40.7421065, lng: -73.9869371
+	        }
+	      }]
 	    };
 	    return _this;
 	  }
 	
 	  _createClass(Map, [{
+	    key: 'mapClicked',
+	    value: function mapClicked(event) {
+	      console.log("Map Clicked: " + JSON.stringify(event.latLng));
+	    }
+	  }, {
+	    key: 'mapMoved',
+	    value: function mapMoved() {
+	      var latLng = this.state.map.getCenter().toJSON();
+	      console.log('Map Moved: ' + JSON.stringify(latLng));
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
@@ -24423,13 +24442,25 @@
 	
 	        _this2.setState({ map: map });
 	      };
+	
+	      //  const markers = <Marker clickable={true} label="TEST" title="TEST TILE" {...marker} />
+	
+	      var markers = this.state.markers.map(function (marker, i) {
+	        return _react2.default.createElement(_reactGoogleMaps.Marker, _extends({ clickable: true, label: 'TEST', title: 'TEST TILE' }, marker));
+	      });
 	      return _react2.default.createElement(_reactGoogleMaps.GoogleMapLoader, {
 	        containerElement: mapContainer,
-	        googleMapElement: _react2.default.createElement(_reactGoogleMaps.GoogleMap, {
-	          ref: mapRef,
-	          defaultZoom: zoom,
-	          defaultCenter: center,
-	          options: { streetViewControl: false, mapTypeControl: false } }) });
+	        googleMapElement: _react2.default.createElement(
+	          _reactGoogleMaps.GoogleMap,
+	          {
+	            ref: mapRef,
+	            onDragend: this.mapMoved.bind(this),
+	            onClick: this.mapClicked.bind(this),
+	            defaultZoom: zoom,
+	            defaultCenter: center,
+	            options: { streetViewControl: false, mapTypeControl: false } },
+	          markers
+	        ) });
 	    }
 	  }]);
 	
