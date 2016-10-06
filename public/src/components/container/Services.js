@@ -38,11 +38,7 @@ class Services extends Component {
       )
     })
     return (
-      <div className="container clearfix">
-
           <ul style={{listStyleType: 'none'}}>{services}</ul>
-
-      </div>
     )
   }
 }
